@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
 async function puzzle(location) {
   message1.textContent = 'Loading.......'
   message2.textContent = ''
-  const dataJSON = await fetch(`http://localhost:3000/weather?address=${location}`);
+  const dataJSON = await fetch(`/weather?address=${location}`);
   const data = await dataJSON.json();
   if (data.error) {
     message1.textContent = data.error
